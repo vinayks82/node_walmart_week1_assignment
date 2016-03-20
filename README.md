@@ -9,9 +9,9 @@ Completed:
 * - [x] Required: `echo.js` prints the first argument to stdout
 * - [x] Required: `cat.js` prints the contents of the first argument to stdout
 * - [x] Required: `touch.js` updates the modified date of the first argument
-* [] Required: `ls.js` recursively lists the files of the first argument
-* [] Required: `mkdir.js` create a directory at the first argument
-* [] Required: `rm.js` deletes any file or directory at the first argument
+* - [X] Required: `ls.js` recursively lists the files of the first argument
+* - [X] Required: `mkdir.js` create a directory at the first argument
+* - [X] Required: `rm.js` deletes any file or directory at the first argument
 * [] Optional: `ln.js` creates a symlink from the second argument to the first argument
 * [] Optional: `grep.js` prints lines matching the first argument in the files matching the second argument
 
