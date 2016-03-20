@@ -1,23 +1,19 @@
 #!/usr/bin/env node
 "use strict";
 
+require('./helper')
 let fs = require("fs"),
 path = require("path");
 
 function* ls() {
-  console.log("SSS");
-    process.argv.forEach((param) => {
-      console.log(param);
-      listDir(param);
-    });
+  listDir(process.argv[2]);
 }
 
 function listDir(fileName) {
-    fs.readdir(path, function(err, items) {
-      console.log("ss" +items);
-      // for (var i=0; i<items.length; i++) {
-      //     console.log(items[i]);
-      // }
+    fs.readdir(fileName, function(err, items) {
+      for (var i=0; i<items.length; i++) {
+          process.stdout.write(`${items[i]}\n`);
+      }
     });
 }
 
