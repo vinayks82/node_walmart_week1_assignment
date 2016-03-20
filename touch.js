@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 "use strict";
-
+require('./helper')
 let fs = require('fs');
 
 function* touch() {
-    process.stdout.write("ddddd");
-    process.argv.forEach((param) => {
-      touchFile(param);
-    });
+  touchFile(process.argv[2]);
 }
 
 function touchFile(fileName) {
-  fs.futimes(fd, atime, mtime, callback)
+  fs.futimes(fileName, new Date(), new Date(), function(err, contents){
+
+  });
 }
 
 module.exports = touch

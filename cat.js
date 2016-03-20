@@ -1,17 +1,16 @@
 #!/usr/bin/env node
 "use strict";
 
+require('./helper')
 let fs = require('fs');
 
 function* cat() {
-    process.argv.forEach((param) => {
-      readFile(param);
-    });
+  readFile(process.argv[2]);
 }
 
 function readFile(fileName) {
-  fs.readFile(fileName, 'utf8', function(err, contents) {
-      process.stdout.write(`${param}`);
+  fs.readFile(fileName, 'UTF8', function(err, contents) {
+      process.stdout.write(`${contents}`);
   });
 }
 

@@ -2,7 +2,6 @@
 "use strict";
 
 require('./helper')
-let fs = require('fs').promise
 
 function* echo() {
     process.argv.forEach((param,index) => {
