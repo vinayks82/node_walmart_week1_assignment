@@ -4,6 +4,7 @@
 let fs = require('fs');
 
 function* touch() {
+    process.stdout.write("ddddd");
     process.argv.forEach((param) => {
       touchFile(param);
     });
