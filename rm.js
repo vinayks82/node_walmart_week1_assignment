@@ -10,11 +10,23 @@ function* rm() {
 }
 
 function deleteFile(fileName) {
-    fs.unlink(fileName, function (err) {
-       if (err) {
-         console.log('failed to remove directory', err);
-       }
-    })
+  fs.readdir(fileName, function(err, items) {
+    for (var i=0; i<items.length; i++) {
+      console.log(items[i])
+      fs.unlink(items[i], function (err) {
+         if (err) {
+           console.log('failed to remove directory', err);
+         }
+      })
+    }
+    if(items.length < 1) {
+      fs.rmdir(fileName, function(err) {
+        if (err) {
+          console.log('failed to remove directory', err);
+        }
+      })
+    }
+  });
 }
 
 module.exports = rm
