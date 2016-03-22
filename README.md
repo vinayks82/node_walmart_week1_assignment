@@ -17,4 +17,4 @@ Completed:
 
 Walkthrough Gif:
 
-![Video Walkthrough](http://i.imgur.com/PSrDpOY.gif)
+![Video Walkthrough](https://cloud.githubusercontent.com/assets/3333982/13944725/e7e11fe4-efc4-11e5-9ada-3c7c9ba39caa.gif)
